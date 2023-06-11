@@ -8,7 +8,7 @@
 * wires
 * soldering equipment
 * a hot-glue gun
-* a USB-micro/c cable
+* a USB cable
 
 # RP2040-Macro-Pad GPIO Pinout
 ![Imgur](https://i.imgur.com/i9qHdCf.png)
