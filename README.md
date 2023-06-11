@@ -10,3 +10,5 @@ Whats neded:
 * soldering equipment
 * a hot-glue gun
 * a USB-micro/c cable
+
+# RP2040-Macro-Pad GPIO Pinout
