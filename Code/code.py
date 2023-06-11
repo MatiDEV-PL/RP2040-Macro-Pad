@@ -56,20 +56,20 @@ while True:
             if not switch.value:
                 try:
                     if keymap[button][0] == KEY:
-                        kbd.press(*keymap[button][1])  # Emulate key press
+                        kbd.press(*keymap[button][1])  
                     else:
-                        cc.send(keymap[button][1])  # Send media control command
+                        cc.send(keymap[button][1])  
                 except ValueError:
-                    pass  # Ignore if key limit reached
+                    pass  
                 switch_state[button] = True
 
         if switch_state[button]:
             if switch.value:
                 try:
                     if keymap[button][0] == KEY:
-                        kbd.release(*keymap[button][1])  # Release the key
+                        kbd.release(*keymap[button][1])  
                 except ValueError:
                     pass
                 switch_state[button] = False
 
-    time.sleep(0.1)  # debounce
+    time.sleep(0.1) 
