@@ -35,7 +35,7 @@ keymap = {
     5: (KEY, [Keycode.KEYPAD_MINUS]),  # "Reduce volume" "🠗" "Made possible using Hotkeys"
     6: (KEY, [Keycode.CONTROL, Keycode.L]),  # "Opens folder" "F1"
     7: (KEY, [Keycode.PAUSE]),  # "Mute Microphone" "PAUSE/BRAKE" "Made possible using Hotkeys"
-    8: (KEY, [Keycode.WINDOWS, Keycode.SHIFT, Keycode.T]),  # "Extracts text from image" "Made possible using PowerToys"
+    8: (KEY, [Keycode.F3]),  # "F3" "F3"
 }
 
 switches = []
