@@ -31,15 +31,15 @@ KEY = 2
 
 # Define key mappings
 keymap = {
-    0: (KEY, [Keycode.F8]),  # "Discord mute" "F8"
-    1: (KEY, [Keycode.DELETE]),  # "BRUH" "Delete"
-    2: (KEY, [Keycode.KEYPAD_PLUS]),  # "Increase volume" "🠕" "Made possible using Hotkeys"
-    3: (KEY, [Keycode.WINDOWS, Keycode.SHIFT, Keycode.S]),  # "Snipping tool" "Print"
-    4: (KEY, [Keycode.KEYPAD_ZERO]),  # "Mute" "/" "Made possible using Hotkeys"
-    5: (KEY, [Keycode.KEYPAD_MINUS]),  # "Reduce volume" "🠗" "Made possible using Hotkeys"
+    0: (KEY, [Keycode.F8]),  # F8
+    1: (KEY, [Keycode.DELETE]),  # Delete
+    2: (MEDIA, [ConsumerControlCode.VOLUME_INCREMENT]),  # Increase volume
+    3: (KEY, [Keycode.WINDOWS, Keycode.SHIFT, Keycode.S]),  # Snipping tool
+    4: (MEDIA, [ConsumerControlCode.MUTE]),  # Mute
+    5: (MEDIA, [ConsumerControlCode.VOLUME_DECREMENT]),  # Reduce volume
     6: (KEY, [Keycode.CONTROL, Keycode.L]),  # "Opens folder" "F1"
     7: (KEY, [Keycode.PAUSE]),  # "Mute Microphone" "PAUSE/BRAKE" "Made possible using Hotkeys"
-    8: (KEY, [Keycode.F3]),  # "F3" "F3"
+    8: (KEY, [Keycode.F3]),  # F3
 }
 
 # Initialize switch inputs
@@ -56,8 +56,8 @@ for pin in pins:
 kbd = Keyboard(usb_hid.devices)
 cc = ConsumerControl(usb_hid.devices)
 
-# Main loop
-while True:
+# Function to read switch inputs and execute actions
+def read_switches(alarm):
     for button, switch in enumerate(switches):
         if not switch_state[button]:
             if not switch.value:
@@ -81,4 +81,12 @@ while True:
 
                 switch_state[button] = False  # Set switch state as inactive
 
-    time.sleep(0.05)  # Pause before the next iteration
+# Schedule the switch reading function to run every 0.05 seconds
+alarm = time.monotonic() + 0.05
+while True:
+    if time.monotonic() >= alarm:
+        read_switches(alarm)
+        alarm += 0.05
+
+    # Perform any other main loop tasks here if needed
+    time.sleep(0.01)
