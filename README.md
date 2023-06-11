@@ -12,3 +12,4 @@ Whats neded:
 * a USB-micro/c cable
 
 # RP2040-Macro-Pad GPIO Pinout
+![Imgur](https://i.imgur.com/i9qHdCf.png)
