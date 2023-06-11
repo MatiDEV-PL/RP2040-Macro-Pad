@@ -10,7 +10,7 @@
 * a hot-glue gun
 * a USB cable
 
-# RP2040-Macro-Pad GPIO Pinout
+# RP2040-Macro-Pad GPIO Pinout:
 ![Imgur](https://i.imgur.com/i9qHdCf.png)
 
 # Steps:
