@@ -7,10 +7,12 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
 
+# Initialize LED
 led = DigitalInOut(board.LED)
 led.direction = Direction.OUTPUT
 led.value = True
 
+# Define pin mappings
 pins = [
     board.GP0,
     board.GP1,
@@ -23,9 +25,11 @@ pins = [
     board.GP8,
 ]
 
+# Define constants for key types
 MEDIA = 1
 KEY = 2
 
+# Define key mappings
 keymap = {
     0: (KEY, [Keycode.F8]),  # "Discord mute" "F8"
     1: (KEY, [Keycode.DELETE]),  # "BRUH" "Delete"
@@ -38,6 +42,7 @@ keymap = {
     8: (KEY, [Keycode.F3]),  # "F3" "F3"
 }
 
+# Initialize switch inputs
 switches = []
 switch_state = [False] * 9
 
@@ -47,29 +52,33 @@ for pin in pins:
     switch.pull = Pull.UP
     switches.append(switch)
 
+# Initialize keyboard and consumer control objects
 kbd = Keyboard(usb_hid.devices)
 cc = ConsumerControl(usb_hid.devices)
 
+# Main loop
 while True:
     for button, switch in enumerate(switches):
         if not switch_state[button]:
             if not switch.value:
                 try:
                     if keymap[button][0] == KEY:
-                        kbd.press(*keymap[button][1])  
+                        kbd.press(*keymap[button][1])  # Press the defined key(s)
                     else:
-                        cc.send(keymap[button][1])  
+                        cc.send(keymap[button][1])  # Send the defined consumer control code(s)
                 except ValueError:
-                    pass  
-                switch_state[button] = True
+                    pass  # Ignore any errors
+
+                switch_state[button] = True  # Set switch state as active
 
         if switch_state[button]:
             if switch.value:
                 try:
                     if keymap[button][0] == KEY:
-                        kbd.release(*keymap[button][1])  
+                        kbd.release(*keymap[button][1])  # Release the defined key(s)
                 except ValueError:
-                    pass
-                switch_state[button] = False
+                    pass  # Ignore any errors
 
-    time.sleep(0.1) 
+                switch_state[button] = False  # Set switch state as inactive
+
+    time.sleep(0.05)  # Pause before the next iteration
