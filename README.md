@@ -1,5 +1,4 @@
-# RP2040-Macro-Pad based on [Sebastian Proost Project](https://www.thingiverse.com/thing:4816077)
-Whats neded:
+# Whats neded:
 * 1x a RP2040-Macro-Pad case (my printed with resolution 0.13 and infill 50% on Monoprice MP select mini V2)
 * 1x a RP2040 (any variant of the board will fit)
 * 9x Mechanical keyboard switches
@@ -23,3 +22,5 @@ Whats neded:
 * Close everything up with bolts.
 * Done, now you can define your own key mappings in code.py. List of keycodes (keycode.py) and media controls (consumer_control_code.py) are located in lib\adafruit_hid
 * Optional step if you are using windows you can remove RP2040 storage letter in computer management so it looks like it's regular macro-pad
+
+RP2040-Macro-Pad is based on [Sebastian Proost Project](https://www.thingiverse.com/thing:4816077)
