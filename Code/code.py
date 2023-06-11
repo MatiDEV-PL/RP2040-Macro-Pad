@@ -65,7 +65,7 @@ def read_switches(alarm):
                     if keymap[button][0] == KEY:
                         kbd.press(*keymap[button][1])  # Press the defined key(s)
                     else:
-                        cc.send(keymap[button][1])  # Send the defined consumer control code(s)
+                        cc.press(keymap[button][1])  # Press the defined consumer control code(s)
                 except ValueError:
                     pass  # Ignore any errors
 
@@ -76,6 +76,8 @@ def read_switches(alarm):
                 try:
                     if keymap[button][0] == KEY:
                         kbd.release(*keymap[button][1])  # Release the defined key(s)
+                    else:
+                        cc.release()  # Release the consumer control code
                 except ValueError:
                     pass  # Ignore any errors
 
@@ -87,6 +89,6 @@ while True:
     if time.monotonic() >= alarm:
         read_switches(alarm)
         alarm += 0.05
-
+        
     # Perform any other main loop tasks here if needed
     time.sleep(0.01)
