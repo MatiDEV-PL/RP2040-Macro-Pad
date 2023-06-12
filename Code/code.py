@@ -37,8 +37,8 @@ keymap = {
     3: (KEY, [Keycode.WINDOWS, Keycode.SHIFT, Keycode.S]),  # Snipping tool
     4: (MEDIA, [ConsumerControlCode.MUTE]),  # Mute
     5: (MEDIA, [ConsumerControlCode.VOLUME_DECREMENT]),  # Reduce volume
-    6: (KEY, [Keycode.CONTROL, Keycode.L]),  # "Opens folder" "F1"
-    7: (KEY, [Keycode.PAUSE]),  # "Mute Microphone" "PAUSE/BRAKE" "Made possible using Hotkeys"
+    6: (KEY, [Keycode.F1]),  # F1
+    7: (KEY, [Keycode.F2]),  # F2
     8: (KEY, [Keycode.F3]),  # F3
 }
 
