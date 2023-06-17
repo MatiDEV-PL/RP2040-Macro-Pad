@@ -4,7 +4,7 @@
 * 9x Mechanical keyboard switches
 * 9x keycaps of your choice
 * 1x a switch opener (optional)
-* 4x M3 bolts (1 cm long)
+* 4x M3 bolts (1cm long)
 * wires
 * soldering equipment
 * a hot-glue gun
