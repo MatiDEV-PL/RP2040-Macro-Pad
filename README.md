@@ -26,5 +26,5 @@
 RP2040-Macro-Pad is based on [Sebastian Proost Project](https://www.thingiverse.com/thing:4816077)
 
 # If you like my work consider giving tip
-<img src="https://i.imgur.com/wGoXH8g.png" width="200">
+<img src="https://github.com/MatiDEV-PL/RP2040-Macro-Pad/blob/main/Donate.png" width="200">
 0x558243239Edbc454D2eAAd9c5E2966Fd8dE0Baa7
