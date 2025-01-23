@@ -11,7 +11,7 @@
 * a USB cable
 
 # RP2040-Macro-Pad GPIO Pinout:
-![Imgur](https://i.imgur.com/LVfpyuk.png)
+<img src="https://github.com/MatiDEV-PL/RP2040-Macro-Pad/blob/main/rp_pinout.png">
 
 # Steps:
 * Gather all the required components and tools from What's Needed
