@@ -1,3 +1,6 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://github.com/MatiDEV-PL/Open-ToolBox/blob/main/LICENSE.txt) 
+[![CodeFactor](https://www.codefactor.io/repository/github/matidev-pl/rp2040-macro-pad/badge)](https://www.codefactor.io/repository/github/matidev-pl/open-toolbox)  
+
 # What's Needed:
 * 1x a RP2040-Macro-Pad case (mine was printed with resolution of 0.13 and infill 50%)
 * 1x a RP2040 (any variant of the board will fit)
