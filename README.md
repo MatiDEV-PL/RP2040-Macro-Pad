@@ -1,4 +1,4 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://github.com/MatiDEV-PL/Open-ToolBox/blob/main/LICENSE.txt) 
+[![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://github.com/MatiDEV-PL/RP2040-Macro-Pad/blob/main/LICENSE.txt) 
 [![CodeFactor](https://www.codefactor.io/repository/github/matidev-pl/rp2040-macro-pad/badge)](https://www.codefactor.io/repository/github/matidev-pl/open-toolbox)  
 
 # What's Needed:
